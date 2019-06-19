@@ -1,0 +1,51 @@
+<!-- ?debug_mode=1 -->
+<?php
+include_once("./prod_code.php");
+$PRIVATE_KEY = $GLOBALS["pri_key"];
+$ITEMS = $GLOBALS["prod_code"];
+$FLAG = $GLOBALS["flag"];
+
+if (isset($_GET["debug_mode"]) && $_GET["debug_mode"]==="1") {
+    show_source(__FILE__);
+    exit();
+}
+
+if (isset($_GET["prod_code"])) {
+    $req_prod_code = $_GET["prod_code"];
+
+    foreach (array_keys($ITEMS) as $prod_code) {
+        if ($prod_code === $req_prod_code) {
+            $set_prod_code = base64_encode($req_prod_code);
+            $set_transaction_hash = $ITEMS[$req_prod_code]["hash"];
+            $set_time = time()+3600;
+
+            @setcookie("prod_code", $set_prod_code, $set_time, "/");
+            @setcookie("transaction_hash", $set_transaction_hash, $set_time, "/");
+            $_COOKIE["prod_code"] = $set_prod_code;
+            $_COOKIE["transaction_hash"] = $set_transaction_hash;
+            break;
+        }
+    }
+}
+
+if (isset($_COOKIE["prod_code"]) && isset($_COOKIE["transaction_hash"])) {
+    $prod_code = base64_decode($_COOKIE["prod_code"]);
+    $transaction_hash = $_COOKIE["transaction_hash"];
+
+    if (hash("sha512",$PRIVATE_KEY.$prod_code) === $transaction_hash) {
+        $set_time = time()+3600;
+
+        switch ($prod_code) {
+            case("94-04-3QmM-ulP-c0z-k"):
+            case("W8-31-5053-0kX-QiL-1"):
+                echo "Success: {$ITEMS[$prod_code]["msg"]}";
+                @setcookie("prod_code", "", $set_time, "/");
+                @setcookie("transaction_hash", "", $set_time, "/");
+                break;
+            default:
+                echo "{$FLAG}";            
+        }
+    }
+} else {
+    echo "Error: Transaction hash is invalid.";
+}

@@ -1,0 +1,112 @@
+# nc encryptsvc.cddc19q.ctf.sg 54321
+
+--------------------------------------------
+Text Encryption Service 
+--------------------------------------------
+
+[Service Menu]
+    1) Show example
+    2) Encrypt message
+    3) Decrypt message
+    4) Show public key
+    5) Quit
+
+Your selection : 2
+
+    You have selected [2]
+
+
+
+[*] Input : aaaabaaacaaadaaaeaaafaaagaaahaaaiaaajaaakaaalaaamaaanaaaoaaapaaaqaaaraaasaaataaauaaavaaawaaaxaaayaaazaabbaabcaabdaabeaabfaabgaabhaabiaabjaabkaablaabmaabnaaboaabpaabqaabraabsaabtaabuaabvaabwaabxaabyaabzaacbaaccaacdaaceaacfaacgaachaaciaacjaackaaclaacmaacnaac
+-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgLrn8w43ayMc6v435IbO+9xlf
+mMwL7F+yNkXAlQJJMjpCQ7nmaRHBsDDmrAQMqSQXkuMSda8BqF5jsCktIuDuFMbN
+YjrPasTgBGsou9N3TkCxpB1Nk3uy5npNHqQwR1ltUv7Gdsrgby2VX/jPUQKc8HC+
+hy1rN7jBFmbvZ7AcLwIDAQAB
+-----END PUBLIC KEY-----
+ Input buffer overflow
+[Service Menu]
+    1) Show example
+    2) Encrypt message
+    3) Decrypt message
+    4) Show public key
+    5) Quit
+
+Your selection : 4
+
+    You have selected [4]
+
+[Print public key] -------------------------------------------------|
+[+] Public key length : 128
+[+] Public key : 
+
+-----BEGIN PUBLIC KEY-----
+MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDgLrn8w43ayMc6v435IbO+9xlf
+mMwL7F+yNkXAlQJJMjpCQ7nmaRHBsDDmrAQMqSQXkuMSda8BqF5jsCktIuDuFMbN
+YjrPasTgBGsou9N3TkCxpB1Nk3uy5npNHqQwR1ltUv7Gdsrgby2VX/jPUQKc8HC+
+hy1rN7jBFmbvZ7AcLwIDAQAB
+-----END PUBLIC KEY-----
+--------------------------------------------------------------------|
+
+[Service Menu]
+    1) Show example
+    2) Encrypt message
+    3) Decrypt message
+    4) Show public key
+    5) Quit
+
+Your selection : 3
+
+    You have selected [3]
+
+Decrypting service is *NOT* implemented yet. Sorry!
+
+[Service Menu]
+    1) Show example
+    2) Encrypt message
+    3) Decrypt message
+    4) Show public key
+    5) Quit
+
+Your selection : 2
+
+    You have selected [2]
+
+
+
+[*] Input : hello
+[Encrypted message] -------------------------------------------------|
+[+] Encrypted message length : 128
+[+] Encrypted Text : 
+Z0F1+bXCxbcgh521mMwL1gxGBdp/OIoDEmN0YlsTuzkdoc2IhJ4fOKoDXyuvAhre
+iNzf+6TUkGFcnfJSPDHkXYEeyg5Yr6lQhm7VS7RzPKLVi8nMFJd/lQIXZVmKlfKR
+rMSOVPSlefjdTIwlE0VNHn4TK/zF+i5eee95aJa07Rw=
+--------------------------------------------------------------------|
+
+[Service Menu]
+    1) Show example
+    2) Encrypt message
+    3) Decrypt message
+    4) Show public key
+    5) Quit
+
+Your selection : 1
+
+    You have selected [1]
+
+[Encrypted message example] ----------------------------------------|
+[+] Encrypted message length : 128
+[+] Encrypted Text : 
+NXxJpnJ44IJTOYJ9H25flNYkXlJoL/SfYgkYEDipQZWdzrcQ3MlcDTzu65EDi/fu
+q3u7QRuPM2/ImleWUmDpeCTrny5r6bYq8q30l1aOHWSMwU3HpvO/vD1n4s63/8x7
+2y0Y2S/xOsOT1xJn33I2nQ049viEH9DMJ0ZiQikpDM8=
+--------------------------------------------------------------------|
+
+[Service Menu]
+    1) Show example
+    2) Encrypt message
+    3) Decrypt message
+    4) Show public key
+    5) Quit
+
+Your selection : 
