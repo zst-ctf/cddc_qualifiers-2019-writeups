@@ -71,3 +71,12 @@ Challenge | Category | Remarks
 ~~[Come Back To Earth](./Unsolved/Come_Back_To_Earth)~~ | RE | 
 []() | []() | []()
 ~~[PPAP](./Unsolved/PPAP)~~ | Web | 
+
+## Other writeups
+
+Other people's writeups for my own reference:
+
+- https://blog.justins.in/cddc19q/
+- https://d.oulove.me/2019/06/05/CDDC19-qual-writeup/
+- https://dzhy.dev/2019/06/04/CDDC-2019-Qualifiers-Writeup/
+- https://dzhy.dev/2019/06/14/CDDC-2019-LSCVM-Writeup/
